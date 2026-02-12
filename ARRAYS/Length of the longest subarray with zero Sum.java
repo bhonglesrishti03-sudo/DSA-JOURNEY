@@ -55,7 +55,6 @@ class Solution{
     }
     static int longestArraySum(int[]array){
         Map<Integer,Integer> map = new HashMap<>();
-        map.put(0,-1);
         int maxLen =0;
         int sum=0;
         for(int i=0; i<array.length;i++){
@@ -70,4 +69,5 @@ class Solution{
         }
     }
     return maxLen;
+}
 }
