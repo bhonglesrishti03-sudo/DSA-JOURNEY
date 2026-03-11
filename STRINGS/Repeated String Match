@@ -1,0 +1,20 @@
+class Solution {
+    public int repeatedStringMatch(String a, String b) {
+    //brute force approach
+    //just repeat a until a contains b
+
+    StringBuilder sb = new StringBuilder();
+    int count = 0;
+
+    while(sb.length() < b.length()){
+    sb.append(a);
+    count++;
+}
+if(sb.toString().contains(b))return count;
+//see its not necessary that as soon as as sb.length() becomes greater then b it will give the required repeat maybe we need one extra repeat so we append a one more time
+sb.append(a);
+
+if(sb.toString().contains(b)) return count+1;
+return -1;
+    }
+}
